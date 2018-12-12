@@ -8,8 +8,8 @@
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
     xmlns:workbench="http://www.eclipse.org/oomph/setup/workbench/1.0"
     xsi:schemaLocation="http://www.eclipse.org/oomph/setup/jdt/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore http://www.eclipse.org/oomph/setup/workbench/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Workbench.ecore"
-    name="ru.lonedeveloper.flash.products.calypso"
-    label="FlasH's products">
+    name="ru.lonedeveloper.flash.work.products"
+    label="FlasH's work products">
   <setupTask
       xsi:type="setup:InstallationTask"
       id="installation"/>
@@ -21,7 +21,7 @@
         url="${oomph.update.url}"/>
   </setupTask>
   <product name="eclipse"
-      label="FlasH's eclipse">
+      label="Eclipse for Java">
     <annotation
         source="http://www.eclipse.org/oomph/setup/BrandingInfo">
       <detail
@@ -34,7 +34,7 @@
       </detail>
       <detail
           key="siteURI">
-        <value>https://github.com/FlasH-RUS/oomph</value>
+        <value>https://github.com/FlasH-RUS/oomph-4-work</value>
       </detail>
     </annotation>
     <setupTask
@@ -904,5 +904,5 @@
     </version>
     <description></description>
   </product>
-  <description></description>
+  <description>Installation for work-related stuff</description>
 </setup:ProductCatalog>
