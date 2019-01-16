@@ -1519,59 +1519,6 @@
             url="http://download.eclipse.org/releases/2018-12/201812191000"/>
       </setupTask>
       <setupTask
-          xsi:type="setup:CompoundTask"
-          name="Spring Tools Suite">
-        <setupTask
-            xsi:type="setup.p2:P2Task"
-            label="Spring Tools Suite">
-          <requirement
-              name="org.springframework.ide.eclipse.feature.feature.group"/>
-          <requirement
-              name="org.springframework.ide.eclipse.boot.feature.feature.group"/>
-          <requirement
-              name="org.springframework.ide.eclipse.aop.feature.feature.group"/>
-          <requirement
-              name="org.springframework.ide.eclipse.autowire.feature.feature.group"/>
-          <requirement
-              name="org.springframework.ide.eclipse.batch.feature.feature.group"/>
-          <requirement
-              name="org.springframework.ide.eclipse.integration.feature.feature.group"/>
-          <requirement
-              name="org.springframework.ide.eclipse.security.feature.feature.group"/>
-          <requirement
-              name="org.springframework.ide.eclipse.data.feature.feature.group"/>
-          <requirement
-              name="org.springframework.ide.eclipse.webflow.feature.feature.group"/>
-          <requirement
-              name="org.springframework.ide.eclipse.mylyn.feature.feature.group"/>
-          <requirement
-              name="org.springsource.ide.eclipse.commons.quicksearch.feature.feature.group"/>
-          <repository
-              url="http://dist.springsource.com/release/TOOLS/update/e4.9/"/>
-        </setupTask>
-        <setupTask
-            xsi:type="workbench:KeyBindingTask"
-            filter="(use.idea.keymap=true)"
-            scheme="IntelliJIdeaKeymap4EclipseScheme"
-            keys="CTRL+SHIFT+Q"
-            command="org.springsource.ide.eclipse.quicksearch.commands.quicksearchCommand">
-          <context/>
-        </setupTask>
-      </setupTask>
-      <setupTask
-          xsi:type="setup.p2:P2Task"
-          label="Groovy Eclipse">
-        <requirement
-            name="org.codehaus.groovy.eclipse.feature.feature.group"/>
-        <requirement
-            name="org.codehaus.groovy24.feature.feature.group"/>
-        <requirement
-            name="org.codehaus.groovy.jdt.patch.feature.group"/>
-        <repository
-            url="http://dist.springsource.org/snapshot/GRECLIPSE/e4.9"/>
-        <description></description>
-      </setupTask>
-      <setupTask
           xsi:type="setup.p2:P2Task"
           label="Buildship">
         <repository
