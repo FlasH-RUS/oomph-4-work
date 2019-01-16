@@ -1565,6 +1565,18 @@
           <context/>
         </setupTask>
       </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="Code Recommenders">
+        <requirement
+            name="org.eclipse.recommenders.rcp.feature.feature"/>
+        <requirement
+            name="org.eclipse.recommenders.mylyn.rcp.feature.feature"/>
+        <requirement
+            name="org.eclipse.recommenders.snipmatch.rcp.feature.feature"/>
+        <repository
+            url="https://download.eclipse.org/recommenders/updates/stable/"/>
+      </setupTask>
     </version>
     <description>A basic Eclipse for Java EE w/o JPA, RSE, PDE and CloudFoundry, but with Lombok, STS and Groovy Eclipse added. IDEA keymap is an optional bonus.</description>
   </product>
