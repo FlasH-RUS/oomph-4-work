@@ -146,12 +146,7 @@
       <setupTask
           xsi:type="setup:CompoundTask"
           predecessor="//@products[name='eclipse']/@setupTasks.8/@setupTasks.0"
-          name="org.eclipse.ui">
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.eclipse.ui/KEY_CONFIGURATION_ID"
-            value="IntelliJIdeaKeymap4EclipseScheme"/>
-      </setupTask>
+          name="org.eclipse.ui"/>
       <setupTask
           xsi:type="workbench:KeyBindingTask"
           scheme="IntelliJIdeaKeymap4EclipseScheme"
@@ -460,7 +455,7 @@
         <setupTask
             xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.jdt.ui/editor_codemining_enabled"
-            value="true"/>
+            value="false"/>
         <setupTask
             xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.jdt.ui/editor_save_participant_org.eclipse.jdt.ui.postsavelistener.cleanup"
@@ -737,6 +732,14 @@
             xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.jdt.ui/sp_cleanup.use_this_for_non_static_method_access_only_if_necessary"
             value="true"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup:CompoundTask"
+          name="org.eclipse.ui">
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.ui/KEY_CONFIGURATION_ID"
+            value="IntelliJIdeaKeymap4EclipseScheme"/>
       </setupTask>
       <setupTask
           xsi:type="setup:CompoundTask"
