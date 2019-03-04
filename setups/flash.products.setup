@@ -39,6 +39,11 @@
     </annotation>
     <setupTask
         xsi:type="setup:EclipseIniTask"
+        option="-Xms"
+        value="1g"
+        vm="true"/>
+    <setupTask
+        xsi:type="setup:EclipseIniTask"
         option="-Xmx"
         value="2g"
         vm="true"/>
@@ -58,6 +63,11 @@
           value=":${lombok.jar.location}"
           vm="true"/>
     </setupTask>
+    <setupTask
+        xsi:type="setup:EclipseIniTask"
+        option="-Declipse.p2.max.threads="
+        value="4"
+        vm="true"/>
     <setupTask
         xsi:type="jdt:JRETask"
         version="JavaSE-1.8"
@@ -102,7 +112,7 @@
       </setupTask>
       <setupTask
           xsi:type="workbench:KeyBindingTask"
-          predecessor="//@products[name='eclipse']/@setupTasks.8"
+          predecessor="//@products[name='eclipse']/@setupTasks.10"
           filter="(use.idea.keymap=true)"
           scheme="IntelliJIdeaKeymap4EclipseScheme"
           keys="CTRL+SHIFT+T"
@@ -145,7 +155,7 @@
       </setupTask>
       <setupTask
           xsi:type="setup:CompoundTask"
-          predecessor="//@products[name='eclipse']/@setupTasks.8/@setupTasks.0"
+          predecessor="//@products[name='eclipse']/@setupTasks.10/@setupTasks.0"
           name="org.eclipse.ui"/>
       <setupTask
           xsi:type="workbench:KeyBindingTask"
@@ -452,10 +462,6 @@
             xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.jdt.ui/content_assist_favorite_static_members"
             value="org.mockito.Matchers.*;org.mockito.Mockito.*;org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestBuilders.*;org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.*;org.springframework.security.test.web.servlet.response.SecurityMockMvcResultMatchers.*;org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.*;org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.*;org.springframework.test.web.client.match.MockRestRequestMatchers.*;org.springframework.test.web.client.response.MockRestResponseCreators.*;org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;org.hamcrest.CoreMatchers.*;org.junit.Assert.*;org.hamcrest.Matchers.*;org.hamcrest.MatcherAssert.*"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.eclipse.jdt.ui/editor_codemining_enabled"
-            value="false"/>
         <setupTask
             xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.jdt.ui/editor_save_participant_org.eclipse.jdt.ui.postsavelistener.cleanup"
